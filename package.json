@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": "true",
   "main": "dist/repro.js",
+  "type": "module",
   "scripts": {
     "build": "esbuild --bundle src/repro.ts --outdir=dist --platform=node",
     "start": "npm run build && node dist/repro.js"
@@ -13,7 +14,16 @@
   },
   "dependencies": {
     "@opentelemetry/auto-instrumentations-node": "^0.36.4",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.36.1",
+    "@opentelemetry/instrumentation": "^0.36.1",
+    "@opentelemetry/instrumentation-aws-lambda": "^0.35.0",
+    "@opentelemetry/instrumentation-aws-sdk": "^0.34.0",
+    "@opentelemetry/instrumentation-dns": "^0.31.2",
+    "@opentelemetry/instrumentation-http": "^0.36.1",
+    "@opentelemetry/resources": "^1.10.1",
     "@opentelemetry/sdk-node": "^0.36.1",
-    "@opentelemetry/sdk-trace-base": "^1.10.1"
+    "@opentelemetry/sdk-trace-base": "^1.10.1",
+    "@opentelemetry/sdk-trace-node": "^1.10.1",
+    "@opentelemetry/semantic-conventions": "^1.10.1"
   }
 }
